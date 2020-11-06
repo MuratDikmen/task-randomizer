@@ -1,0 +1,21 @@
+{
+  "name": "pomodoro-randomizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^4.17.1",
+    "livereload": "^0.9.1",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
