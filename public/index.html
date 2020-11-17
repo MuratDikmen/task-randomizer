@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/14301335b4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <title>Task Randomizer</title>
   </head>
   <body class="bg-black">
@@ -34,11 +36,17 @@
         </div>
       </div>
 
-      <div id="tasklist-container" class="flex h-40 px-6 mt-8 text-gray-400 border rounded md:mt-0 md:w-full">
-        <ul class="list-disc" id="tasklist">
-          <li>SWE Curriculum</li>
-          <li>Project Freedom Phase II</li>
-          <li>Professional Development</li>
+      <div id="tasklist-container" class="flex h-40 pl-6 pr-2 mt-8 text-gray-400 border rounded md:mt-0 md:w-full">
+        <ul class="w-full list-disc" id="tasklist">
+          <li>
+            <div class="flex justify-between"><span>SWE Curriculum</span><span class="cursor-pointer">X</span></div>
+          </li>
+          <li>
+            <div class="flex justify-between"><span>Project Freedom Phase II</span><span class="cursor-pointer">X</span></div>
+          </li>
+          <li>
+            <div class="flex justify-between"><span>Professional Development</span><span class="cursor-pointer">X</span></div>
+          </li>
         </ul>
       </div>
 
