@@ -9,9 +9,8 @@
     <title>Task Randomizer</title>
   </head>
   <body class="bg-black">
-    <div class="flex flex-col w-full px-6 mx-auto mt-16 lg:px-20 md:w-4/5 lg:w-3/5">
+    <div class="relative flex flex-col w-full px-6 mx-auto mt-16 lg:px-20 md:w-4/5 lg:w-3/5" id="app-container">
       <h1 class="mb-12 font-sans text-4xl font-medium text-center text-gray-400 md:mb-0">Task Randomizer</h1>
-
       <div class="flex flex-col mt-12 space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
         <div id="input-container" class="flex flex-col items-center justify-center flex-1 h-40 align-middle md:max-w-sm">
           <form class="w-full" id="input-form">
@@ -20,6 +19,7 @@
                 class="w-full h-10 px-2 placeholder-gray-800 bg-gray-400 border rounded focus:outline-none focus:shadow-outline"
                 name="tasks"
                 placeholder="Add New Task..."
+                id="input-field"
               />
             </div>
           </form>
@@ -36,18 +36,8 @@
         </div>
       </div>
 
-      <div id="tasklist-container" class="flex h-40 pl-6 pr-2 mt-8 text-gray-400 border rounded md:mt-0 md:w-full">
-        <ul class="w-full list-disc" id="tasklist">
-          <li>
-            <div class="flex justify-between"><span>SWE Curriculum</span><span class="cursor-pointer">X</span></div>
-          </li>
-          <li>
-            <div class="flex justify-between"><span>Project Freedom Phase II</span><span class="cursor-pointer">X</span></div>
-          </li>
-          <li>
-            <div class="flex justify-between"><span>Professional Development</span><span class="cursor-pointer">X</span></div>
-          </li>
-        </ul>
+      <div id="tasklist-container" class="flex h-auto pl-6 pr-2 mt-8 text-gray-400 border rounded min-h-40 md:mt-0 md:w-full">
+        <ul class="w-full list-disc" id="tasklist"></ul>
       </div>
 
       <div class="flex items-center flex-1 flex-grow-0 mt-4">
