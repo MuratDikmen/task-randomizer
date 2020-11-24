@@ -11,8 +11,10 @@ let tasks;
 
 const getItemsFromLocalStorage = () => {
   if (localStorage.getItem("tasks") === "") {
+    console.log("fist");
     return [];
   } else {
+    console.log("sec");
     return JSON.parse(localStorage.getItem("tasks"));
   }
 };
