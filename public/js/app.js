@@ -10,11 +10,9 @@ let tasks;
 // Initialization of Storage
 
 const getItemsFromLocalStorage = () => {
-  if (localStorage.getItem("tasks") === "") {
-    console.log("fist");
+  if (localStorage.getItem("tasks") === null) {
     return [];
   } else {
-    console.log("sec");
     return JSON.parse(localStorage.getItem("tasks"));
   }
 };
@@ -146,9 +144,7 @@ const removeAlert = () => {
 // Init the app
 
 const init = () => {
-  console.log("initt");
   tasks = getItemsFromLocalStorage();
-  console.log(tasks);
   updateTaskList();
 };
 
