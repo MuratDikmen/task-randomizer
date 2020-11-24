@@ -106,23 +106,25 @@ const randomizeTasks = () => {
 
 const updateTaskList = () => {
   taskList.innerHTML = "";
-  tasks.forEach((task) => {
-    const li = document.createElement("li");
-    const div = document.createElement("div");
-    const taskName = document.createElement("span");
-    const deleteButton = document.createElement("span");
+  if (tasks.length > 0) {
+    tasks.forEach((task) => {
+      const li = document.createElement("li");
+      const div = document.createElement("div");
+      const taskName = document.createElement("span");
+      const deleteButton = document.createElement("span");
 
-    taskName.innerText = task.name;
-    deleteButton.innerText = "X";
+      taskName.innerText = task.name;
+      deleteButton.innerText = "X";
 
-    li.id = task.id;
-    div.classList = "flex justify-between";
-    deleteButton.classList = "cursor-pointer delete-btn";
-    div.appendChild(taskName);
-    div.appendChild(deleteButton);
-    li.appendChild(div);
-    taskList.appendChild(li);
-  });
+      li.id = task.id;
+      div.classList = "flex justify-between";
+      deleteButton.classList = "cursor-pointer delete-btn";
+      div.appendChild(taskName);
+      div.appendChild(deleteButton);
+      li.appendChild(div);
+      taskList.appendChild(li);
+    });
+  }
 };
 
 const alertUser = () => {
