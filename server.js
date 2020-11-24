@@ -5,10 +5,10 @@ const app = express();
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
-app.use(connectLivereload());
+// app.use(connectLivereload());
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, "public"));
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.watch(path.join(__dirname, "public"));
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
