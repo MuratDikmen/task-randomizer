@@ -144,6 +144,7 @@ const removeAlert = () => {
 const init = () => {
   console.log("initt");
   tasks = getItemsFromLocalStorage();
+  console.log(tasks);
   updateTaskList();
 };
 
