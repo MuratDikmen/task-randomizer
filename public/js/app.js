@@ -9,15 +9,15 @@ let tasks;
 
 // Initialization of Storage
 
-const getItemsFromLocalStorage = async () => {
+const getItemsFromLocalStorage = () => {
   if (localStorage.getItem("tasks") === "") {
-    tasks = [];
+    return [];
   } else {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
+    return JSON.parse(localStorage.getItem("tasks"));
   }
 };
 
-const setItemsToLocalStorage = async () => {
+const setItemsToLocalStorage = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
@@ -69,12 +69,14 @@ const addTask = (taskName) => {
   };
 
   tasks.push(task);
-  setItemsToLocalStorage().then((res) => updateTaskList());
+  setItemsToLocalStorage();
+  updateTaskList();
 };
 
 const deleteTask = (taskId) => {
   tasks = tasks.filter((task) => task.id !== Number(taskId));
-  setItemsToLocalStorage().then((res) => updateTaskList());
+  setItemsToLocalStorage();
+  updateTaskList();
 };
 
 const resetInput = () => {
@@ -94,7 +96,8 @@ const randomizeTasks = () => {
     tasks[m] = tasks[i];
     tasks[i] = t;
   }
-  setItemsToLocalStorage().then((res) => updateTaskList());
+  setItemsToLocalStorage();
+  updateTaskList();
 };
 
 // UI Functions
@@ -139,7 +142,9 @@ const removeAlert = () => {
 // Init the app
 
 const init = () => {
-  getItemsFromLocalStorage().then((res) => updateTaskList());
+  console.log("initt");
+  tasks = getItemsFromLocalStorage();
+  updateTaskList();
 };
 
 init();
