@@ -105550,7 +105550,7 @@ video {
   }
 }
 
-@media (hover: hover) {
+@media (hover: none) {
   .hover-hover\:container {
     width: 100%;
   }

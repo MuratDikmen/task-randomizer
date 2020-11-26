@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       screens: {
-        "hover-hover": { raw: "(hover: hover)" },
+        "hover-hover": { raw: "(hover: none)" },
       },
     },
   },
