@@ -8,7 +8,11 @@ module.exports = {
     minHeight: {
       40: "10rem",
     },
-    extend: {},
+    extend: {
+      screens: {
+        "hover-hover": { raw: "(hover: hover)" },
+      },
+    },
   },
   variants: {},
   plugins: [],
