@@ -1,0 +1,8 @@
+@media (hover: hover) {
+  button:hover {
+    background: red;
+  }
+  button {
+    background-color: white;
+  }
+}
